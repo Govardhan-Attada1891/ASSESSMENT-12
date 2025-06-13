@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiply and Divide</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+    input {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript Basic : Exercise-3</h2>
+<p>Write a JavaScript program to calculate multiplication and division of two numbers (input from user).</p>
+
+<form name="calc">
+  1st Number: <input type="text" name="num1"><br>
+  2nd Number: <input type="text" name="num2"><br>
+  <input type="button" onClick="multiply()" value="Multiply">
+  <input type="button" onClick="divide()" value="Divide">
+</form>
+
+<p>The Result Is : <span id="result"></span></p>
+
+<script>
+function multiply() {
+  let num1 = document.calc.num1.value;
+  let num2 = document.calc.num2.value;
+  document.getElementById("result").innerText = num1 * num2;
+}
+
+function divide() {
+  let num1 = document.calc.num1.value;
+  let num2 = document.calc.num2.value;
+  if (num2 == 0) {
+    document.getElementById("result").innerText = "Cannot divide by zero";
+  } else {
+    document.getElementById("result").innerText = num1 / num2;
+  }
+}
+</script>
+
+</body>
+</html>
